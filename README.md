@@ -14,7 +14,7 @@ It consists of Docker containers of the following software components
 * knowledge about the idea of Biodiversity Standards and decentral data provision
 
 # Installation
-In order to roll out the components please copy or rename the file `install.cfg.example` to `install.cfg` and edit configuration in the file.
+In order to roll out the components please copy or rename the file `install.cfg.example` to `install.cfg` and edit the configuration in the file.
 The deployment is designed for Linux OS  (tested with Ubuntu 16.04 and 18.04)
 
 * after cloning this Git repository make _install.sh_ executable by
