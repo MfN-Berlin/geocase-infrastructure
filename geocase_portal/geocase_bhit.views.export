@@ -1,0 +1,659 @@
+$view = new view();
+$view->name = 'bhit';
+$view->description = '';
+$view->tag = 'default';
+$view->base_table = 'full_rawdata';
+$view->human_name = 'BHIT';
+$view->core = 7;
+$view->api_version = '3.0';
+$view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
+
+/* Display: Master */
+$handler = $view->new_display('default', 'Master', 'default');
+$handler->display->display_options['title'] = 'GeoCASe Data Portal';
+$handler->display->display_options['css_class'] = 'portal_table';
+$handler->display->display_options['use_ajax'] = TRUE;
+$handler->display->display_options['use_more_always'] = FALSE;
+$handler->display->display_options['access']['type'] = 'none';
+$handler->display->display_options['cache']['type'] = 'time';
+$handler->display->display_options['cache']['results_lifespan'] = '518400';
+$handler->display->display_options['cache']['results_lifespan_custom'] = '0';
+$handler->display->display_options['cache']['output_lifespan'] = '518400';
+$handler->display->display_options['cache']['output_lifespan_custom'] = '0';
+$handler->display->display_options['query']['type'] = 'views_query';
+$handler->display->display_options['exposed_form']['type'] = 'basic';
+$handler->display->display_options['pager']['type'] = 'full';
+$handler->display->display_options['pager']['options']['items_per_page'] = '50';
+$handler->display->display_options['pager']['options']['offset'] = '0';
+$handler->display->display_options['pager']['options']['id'] = '0';
+$handler->display->display_options['pager']['options']['quantity'] = '9';
+$handler->display->display_options['pager']['options']['expose']['items_per_page'] = TRUE;
+$handler->display->display_options['pager']['options']['expose']['items_per_page_options'] = '10, 50, 100, 200, 500';
+$handler->display->display_options['style_plugin'] = 'table';
+$handler->display->display_options['style_options']['columns'] = array(
+  'counter' => 'counter',
+  'url' => 'url',
+  'providername' => 'providername',
+  'provideraddress' => 'provideraddress',
+  'providercountry' => 'providercountry',
+  'nothing' => 'nothing',
+  'datasetownerabbrev' => 'datasetownerabbrev',
+  'collectioncode' => 'collectioncode',
+  'unitid' => 'unitid',
+  'gatheringdate' => 'gatheringdate',
+  'collectornumber' => 'collectornumber',
+  'domain' => 'domain',
+  'fullScientificName' => 'fullScientificName',
+  'genusOrMonomial' => 'genusOrMonomial',
+  'higherrank' => 'higherrank',
+  'highertaxon' => 'highertaxon',
+  'infragenericEpithet' => 'infragenericEpithet',
+  'infraspecificEpithet' => 'infraspecificEpithet',
+  'isocountrycode' => 'isocountrycode',
+  'providerurl' => 'providerurl',
+  'kindofunit' => 'kindofunit',
+  'locality' => 'locality',
+  'mineral' => 'mineral',
+  'preparationType' => 'preparationType',
+  'recordURI' => 'recordURI',
+  'stratigraphytext' => 'stratigraphytext',
+  'stratigraphytype' => 'stratigraphytype',
+  'term' => 'term',
+  'recordURI_1' => 'recordURI_1',
+);
+$handler->display->display_options['style_options']['default'] = 'fullScientificName';
+$handler->display->display_options['style_options']['info'] = array(
+  'counter' => array(
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'url' => array(
+    'sortable' => 0,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'providername' => array(
+    'sortable' => 0,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'provideraddress' => array(
+    'sortable' => 0,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'providercountry' => array(
+    'sortable' => 0,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'nothing' => array(
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'datasetownerabbrev' => array(
+    'sortable' => 0,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'collectioncode' => array(
+    'sortable' => 0,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'unitid' => array(
+    'sortable' => 0,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'gatheringdate' => array(
+    'sortable' => 0,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'collectornumber' => array(
+    'sortable' => 0,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'domain' => array(
+    'sortable' => 0,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'fullScientificName' => array(
+    'sortable' => 0,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'genusOrMonomial' => array(
+    'sortable' => 0,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'higherrank' => array(
+    'sortable' => 0,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'highertaxon' => array(
+    'sortable' => 0,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'infragenericEpithet' => array(
+    'sortable' => 0,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'infraspecificEpithet' => array(
+    'sortable' => 0,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'isocountrycode' => array(
+    'sortable' => 0,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'providerurl' => array(
+    'sortable' => 0,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'kindofunit' => array(
+    'sortable' => 0,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'locality' => array(
+    'sortable' => 0,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'mineral' => array(
+    'sortable' => 0,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'preparationType' => array(
+    'sortable' => 0,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'recordURI' => array(
+    'sortable' => 0,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'stratigraphytext' => array(
+    'sortable' => 0,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'stratigraphytype' => array(
+    'sortable' => 0,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'term' => array(
+    'sortable' => 0,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+  'recordURI_1' => array(
+    'sortable' => 0,
+    'default_sort_order' => 'asc',
+    'align' => '',
+    'separator' => '',
+    'empty_column' => 0,
+  ),
+);
+$handler->display->display_options['style_options']['sticky'] = TRUE;
+/* Header: Global: Result summary */
+$handler->display->display_options['header']['result']['id'] = 'result';
+$handler->display->display_options['header']['result']['table'] = 'views';
+$handler->display->display_options['header']['result']['field'] = 'result';
+$handler->display->display_options['header']['result']['content'] = '<div style="width: 100%; right: 0px; text-align: right; float: right;">@total datasets found.</div>';
+/* No results behavior: Global: Text area */
+$handler->display->display_options['empty']['area']['id'] = 'area';
+$handler->display->display_options['empty']['area']['table'] = 'views';
+$handler->display->display_options['empty']['area']['field'] = 'area';
+$handler->display->display_options['empty']['area']['empty'] = TRUE;
+$handler->display->display_options['empty']['area']['content'] = '<div class="messages warning">No results found for your search request!</div>
+<br/><br/><br/><br/>
+<br/><br/><br/><br/>
+<br/><br/><br/><br/>';
+$handler->display->display_options['empty']['area']['format'] = 'full_html';
+/* Field: Global: View result counter */
+$handler->display->display_options['fields']['counter']['id'] = 'counter';
+$handler->display->display_options['fields']['counter']['table'] = 'views';
+$handler->display->display_options['fields']['counter']['field'] = 'counter';
+$handler->display->display_options['fields']['counter']['label'] = '#';
+$handler->display->display_options['fields']['counter']['counter_start'] = '1';
+$handler->display->display_options['fields']['counter']['reverse'] = 0;
+/* Field: full_rawdata: url */
+$handler->display->display_options['fields']['url']['id'] = 'url';
+$handler->display->display_options['fields']['url']['table'] = 'full_rawdata';
+$handler->display->display_options['fields']['url']['field'] = 'url';
+$handler->display->display_options['fields']['url']['label'] = 'Multimedia';
+$handler->display->display_options['fields']['url']['alter']['alter_text'] = TRUE;
+$handler->display->display_options['fields']['url']['alter']['text'] = '<img src="[url]" alt="" width="100px" style="width: 100px;"/>';
+$handler->display->display_options['fields']['url']['alter']['make_link'] = TRUE;
+$handler->display->display_options['fields']['url']['alter']['path'] = '[url]';
+$handler->display->display_options['fields']['url']['alter']['external'] = TRUE;
+$handler->display->display_options['fields']['url']['alter']['target'] = '_blank';
+$handler->display->display_options['fields']['url']['empty'] = '[no media]';
+/* Field: full_rawdata: providername */
+$handler->display->display_options['fields']['providername']['id'] = 'providername';
+$handler->display->display_options['fields']['providername']['table'] = 'full_rawdata';
+$handler->display->display_options['fields']['providername']['field'] = 'providername';
+$handler->display->display_options['fields']['providername']['label'] = 'Provider Name';
+$handler->display->display_options['fields']['providername']['exclude'] = TRUE;
+/* Field: full_rawdata: provideraddress */
+$handler->display->display_options['fields']['provideraddress']['id'] = 'provideraddress';
+$handler->display->display_options['fields']['provideraddress']['table'] = 'full_rawdata';
+$handler->display->display_options['fields']['provideraddress']['field'] = 'provideraddress';
+$handler->display->display_options['fields']['provideraddress']['label'] = 'Address';
+$handler->display->display_options['fields']['provideraddress']['exclude'] = TRUE;
+/* Field: full_rawdata: providercountry */
+$handler->display->display_options['fields']['providercountry']['id'] = 'providercountry';
+$handler->display->display_options['fields']['providercountry']['table'] = 'full_rawdata';
+$handler->display->display_options['fields']['providercountry']['field'] = 'providercountry';
+$handler->display->display_options['fields']['providercountry']['label'] = 'Provider Country';
+$handler->display->display_options['fields']['providercountry']['exclude'] = TRUE;
+/* Field: Global: Custom text */
+$handler->display->display_options['fields']['nothing']['id'] = 'nothing';
+$handler->display->display_options['fields']['nothing']['table'] = 'views';
+$handler->display->display_options['fields']['nothing']['field'] = 'nothing';
+$handler->display->display_options['fields']['nothing']['label'] = 'Institution';
+$handler->display->display_options['fields']['nothing']['exclude'] = TRUE;
+$handler->display->display_options['fields']['nothing']['alter']['text'] = 'Institution: [providername] <br/>
+[provideraddress], [providercountry] <br/>
+Web: [providerurl]';
+/* Field: full_rawdata: datasetownerabbrev */
+$handler->display->display_options['fields']['datasetownerabbrev']['id'] = 'datasetownerabbrev';
+$handler->display->display_options['fields']['datasetownerabbrev']['table'] = 'full_rawdata';
+$handler->display->display_options['fields']['datasetownerabbrev']['field'] = 'datasetownerabbrev';
+$handler->display->display_options['fields']['datasetownerabbrev']['label'] = 'Owner';
+$handler->display->display_options['fields']['datasetownerabbrev']['exclude'] = TRUE;
+$handler->display->display_options['fields']['datasetownerabbrev']['alter']['alter_text'] = TRUE;
+$handler->display->display_options['fields']['datasetownerabbrev']['alter']['text'] = '<div title="[providername]">[datasetownerabbrev]</div>';
+/* Field: full_rawdata: collectioncode */
+$handler->display->display_options['fields']['collectioncode']['id'] = 'collectioncode';
+$handler->display->display_options['fields']['collectioncode']['table'] = 'full_rawdata';
+$handler->display->display_options['fields']['collectioncode']['field'] = 'collectioncode';
+$handler->display->display_options['fields']['collectioncode']['label'] = 'Collection';
+/* Field: full_rawdata: unitid */
+$handler->display->display_options['fields']['unitid']['id'] = 'unitid';
+$handler->display->display_options['fields']['unitid']['table'] = 'full_rawdata';
+$handler->display->display_options['fields']['unitid']['field'] = 'unitid';
+$handler->display->display_options['fields']['unitid']['label'] = 'Object ID';
+/* Field: full_rawdata: gatheringdate */
+$handler->display->display_options['fields']['gatheringdate']['id'] = 'gatheringdate';
+$handler->display->display_options['fields']['gatheringdate']['table'] = 'full_rawdata';
+$handler->display->display_options['fields']['gatheringdate']['field'] = 'gatheringdate';
+$handler->display->display_options['fields']['gatheringdate']['label'] = 'Gathering Date';
+/* Field: full_rawdata: collectornumber */
+$handler->display->display_options['fields']['collectornumber']['id'] = 'collectornumber';
+$handler->display->display_options['fields']['collectornumber']['table'] = 'full_rawdata';
+$handler->display->display_options['fields']['collectornumber']['field'] = 'collectornumber';
+$handler->display->display_options['fields']['collectornumber']['label'] = 'Collector Number';
+/* Field: full_rawdata: domain */
+$handler->display->display_options['fields']['domain']['id'] = 'domain';
+$handler->display->display_options['fields']['domain']['table'] = 'full_rawdata';
+$handler->display->display_options['fields']['domain']['field'] = 'domain';
+$handler->display->display_options['fields']['domain']['label'] = 'Domain';
+/* Field: full_rawdata: fullScientificName */
+$handler->display->display_options['fields']['fullScientificName']['id'] = 'fullScientificName';
+$handler->display->display_options['fields']['fullScientificName']['table'] = 'full_rawdata';
+$handler->display->display_options['fields']['fullScientificName']['field'] = 'fullScientificName';
+$handler->display->display_options['fields']['fullScientificName']['label'] = 'Full Scientific Name';
+/* Field: full_rawdata: genusOrMonomial */
+$handler->display->display_options['fields']['genusOrMonomial']['id'] = 'genusOrMonomial';
+$handler->display->display_options['fields']['genusOrMonomial']['table'] = 'full_rawdata';
+$handler->display->display_options['fields']['genusOrMonomial']['field'] = 'genusOrMonomial';
+$handler->display->display_options['fields']['genusOrMonomial']['label'] = 'Genus or Monomial';
+/* Field: full_rawdata: higherrank */
+$handler->display->display_options['fields']['higherrank']['id'] = 'higherrank';
+$handler->display->display_options['fields']['higherrank']['table'] = 'full_rawdata';
+$handler->display->display_options['fields']['higherrank']['field'] = 'higherrank';
+$handler->display->display_options['fields']['higherrank']['label'] = 'Taxon Rank';
+$handler->display->display_options['fields']['higherrank']['alter']['alter_text'] = TRUE;
+$handler->display->display_options['fields']['higherrank']['alter']['path_case'] = 'ucfirst';
+$handler->display->display_options['fields']['higherrank']['alter']['nl2br'] = TRUE;
+/* Field: full_rawdata: highertaxon */
+$handler->display->display_options['fields']['highertaxon']['id'] = 'highertaxon';
+$handler->display->display_options['fields']['highertaxon']['table'] = 'full_rawdata';
+$handler->display->display_options['fields']['highertaxon']['field'] = 'highertaxon';
+$handler->display->display_options['fields']['highertaxon']['label'] = 'Higher Taxon';
+/* Field: full_rawdata: infragenericEpithet */
+$handler->display->display_options['fields']['infragenericEpithet']['id'] = 'infragenericEpithet';
+$handler->display->display_options['fields']['infragenericEpithet']['table'] = 'full_rawdata';
+$handler->display->display_options['fields']['infragenericEpithet']['field'] = 'infragenericEpithet';
+$handler->display->display_options['fields']['infragenericEpithet']['label'] = 'Infrageneric Epithet';
+/* Field: full_rawdata: infraspecificEpithet */
+$handler->display->display_options['fields']['infraspecificEpithet']['id'] = 'infraspecificEpithet';
+$handler->display->display_options['fields']['infraspecificEpithet']['table'] = 'full_rawdata';
+$handler->display->display_options['fields']['infraspecificEpithet']['field'] = 'infraspecificEpithet';
+$handler->display->display_options['fields']['infraspecificEpithet']['label'] = 'Infraspecific Epithet';
+/* Field: full_rawdata: isocountrycode */
+$handler->display->display_options['fields']['isocountrycode']['id'] = 'isocountrycode';
+$handler->display->display_options['fields']['isocountrycode']['table'] = 'full_rawdata';
+$handler->display->display_options['fields']['isocountrycode']['field'] = 'isocountrycode';
+$handler->display->display_options['fields']['isocountrycode']['label'] = 'Gathering Country (ISO Code)';
+/* Field: full_rawdata: providerurl */
+$handler->display->display_options['fields']['providerurl']['id'] = 'providerurl';
+$handler->display->display_options['fields']['providerurl']['table'] = 'full_rawdata';
+$handler->display->display_options['fields']['providerurl']['field'] = 'providerurl';
+$handler->display->display_options['fields']['providerurl']['label'] = 'Provider URL';
+$handler->display->display_options['fields']['providerurl']['exclude'] = TRUE;
+/* Field: full_rawdata: kindofunit */
+$handler->display->display_options['fields']['kindofunit']['id'] = 'kindofunit';
+$handler->display->display_options['fields']['kindofunit']['table'] = 'full_rawdata';
+$handler->display->display_options['fields']['kindofunit']['field'] = 'kindofunit';
+$handler->display->display_options['fields']['kindofunit']['label'] = 'Kind of Unit';
+/* Field: full_rawdata: locality */
+$handler->display->display_options['fields']['locality']['id'] = 'locality';
+$handler->display->display_options['fields']['locality']['table'] = 'full_rawdata';
+$handler->display->display_options['fields']['locality']['field'] = 'locality';
+$handler->display->display_options['fields']['locality']['label'] = 'Locality';
+/* Field: full_rawdata: mineral */
+$handler->display->display_options['fields']['mineral']['id'] = 'mineral';
+$handler->display->display_options['fields']['mineral']['table'] = 'full_rawdata';
+$handler->display->display_options['fields']['mineral']['field'] = 'mineral';
+$handler->display->display_options['fields']['mineral']['label'] = '';
+$handler->display->display_options['fields']['mineral']['exclude'] = TRUE;
+$handler->display->display_options['fields']['mineral']['alter']['alter_text'] = TRUE;
+$handler->display->display_options['fields']['mineral']['element_label_colon'] = FALSE;
+$handler->display->display_options['fields']['mineral']['hide_empty'] = TRUE;
+/* Field: full_rawdata: preparationType */
+$handler->display->display_options['fields']['preparationType']['id'] = 'preparationType';
+$handler->display->display_options['fields']['preparationType']['table'] = 'full_rawdata';
+$handler->display->display_options['fields']['preparationType']['field'] = 'preparationType';
+$handler->display->display_options['fields']['preparationType']['label'] = 'Preparation Type';
+/* Field: full_rawdata: recordURI */
+$handler->display->display_options['fields']['recordURI']['id'] = 'recordURI';
+$handler->display->display_options['fields']['recordURI']['table'] = 'full_rawdata';
+$handler->display->display_options['fields']['recordURI']['field'] = 'recordURI';
+$handler->display->display_options['fields']['recordURI']['label'] = 'Record URI';
+$handler->display->display_options['fields']['recordURI']['exclude'] = TRUE;
+/* Field: full_rawdata: stratigraphytext */
+$handler->display->display_options['fields']['stratigraphytext']['id'] = 'stratigraphytext';
+$handler->display->display_options['fields']['stratigraphytext']['table'] = 'full_rawdata';
+$handler->display->display_options['fields']['stratigraphytext']['field'] = 'stratigraphytext';
+$handler->display->display_options['fields']['stratigraphytext']['label'] = 'Stratigraphy';
+/* Field: full_rawdata: stratigraphytype */
+$handler->display->display_options['fields']['stratigraphytype']['id'] = 'stratigraphytype';
+$handler->display->display_options['fields']['stratigraphytype']['table'] = 'full_rawdata';
+$handler->display->display_options['fields']['stratigraphytype']['field'] = 'stratigraphytype';
+$handler->display->display_options['fields']['stratigraphytype']['label'] = 'Stratigraphic Type';
+/* Field: full_rawdata: term */
+$handler->display->display_options['fields']['term']['id'] = 'term';
+$handler->display->display_options['fields']['term']['table'] = 'full_rawdata';
+$handler->display->display_options['fields']['term']['field'] = 'term';
+$handler->display->display_options['fields']['term']['label'] = 'Term';
+/* Field: full_rawdata: recordURI */
+$handler->display->display_options['fields']['recordURI_1']['id'] = 'recordURI_1';
+$handler->display->display_options['fields']['recordURI_1']['table'] = 'full_rawdata';
+$handler->display->display_options['fields']['recordURI_1']['field'] = 'recordURI';
+$handler->display->display_options['fields']['recordURI_1']['label'] = 'Record URI';
+$handler->display->display_options['fields']['recordURI_1']['alter']['make_link'] = TRUE;
+$handler->display->display_options['fields']['recordURI_1']['alter']['external'] = TRUE;
+$handler->display->display_options['fields']['recordURI_1']['alter']['target'] = '_blank';
+/* Sort criterion: full_rawdata: institutioncode */
+$handler->display->display_options['sorts']['institutioncode']['id'] = 'institutioncode';
+$handler->display->display_options['sorts']['institutioncode']['table'] = 'full_rawdata';
+$handler->display->display_options['sorts']['institutioncode']['field'] = 'institutioncode';
+/* Sort criterion: full_rawdata: datasetownerabbrev */
+$handler->display->display_options['sorts']['datasetownerabbrev']['id'] = 'datasetownerabbrev';
+$handler->display->display_options['sorts']['datasetownerabbrev']['table'] = 'full_rawdata';
+$handler->display->display_options['sorts']['datasetownerabbrev']['field'] = 'datasetownerabbrev';
+/* Sort criterion: full_rawdata: collectioncode */
+$handler->display->display_options['sorts']['collectioncode']['id'] = 'collectioncode';
+$handler->display->display_options['sorts']['collectioncode']['table'] = 'full_rawdata';
+$handler->display->display_options['sorts']['collectioncode']['field'] = 'collectioncode';
+/* Sort criterion: full_rawdata: unitid */
+$handler->display->display_options['sorts']['unitid']['id'] = 'unitid';
+$handler->display->display_options['sorts']['unitid']['table'] = 'full_rawdata';
+$handler->display->display_options['sorts']['unitid']['field'] = 'unitid';
+/* Filter criterion: full_rawdata: fullScientificName */
+$handler->display->display_options['filters']['fullScientificName']['id'] = 'fullScientificName';
+$handler->display->display_options['filters']['fullScientificName']['table'] = 'full_rawdata';
+$handler->display->display_options['filters']['fullScientificName']['field'] = 'fullScientificName';
+$handler->display->display_options['filters']['fullScientificName']['operator'] = 'contains';
+$handler->display->display_options['filters']['fullScientificName']['group'] = 1;
+$handler->display->display_options['filters']['fullScientificName']['exposed'] = TRUE;
+$handler->display->display_options['filters']['fullScientificName']['expose']['operator_id'] = 'fullScientificName_op';
+$handler->display->display_options['filters']['fullScientificName']['expose']['label'] = 'Scientific Name';
+$handler->display->display_options['filters']['fullScientificName']['expose']['use_operator'] = TRUE;
+$handler->display->display_options['filters']['fullScientificName']['expose']['operator'] = 'fullScientificName_op';
+$handler->display->display_options['filters']['fullScientificName']['expose']['identifier'] = 'fullScientificName';
+$handler->display->display_options['filters']['fullScientificName']['expose']['remember_roles'] = array(
+  2 => '2',
+  1 => 0,
+  3 => 0,
+);
+/* Filter criterion: full_rawdata: highertaxon */
+$handler->display->display_options['filters']['highertaxon']['id'] = 'highertaxon';
+$handler->display->display_options['filters']['highertaxon']['table'] = 'full_rawdata';
+$handler->display->display_options['filters']['highertaxon']['field'] = 'highertaxon';
+$handler->display->display_options['filters']['highertaxon']['operator'] = 'contains';
+$handler->display->display_options['filters']['highertaxon']['group'] = 1;
+$handler->display->display_options['filters']['highertaxon']['exposed'] = TRUE;
+$handler->display->display_options['filters']['highertaxon']['expose']['operator_id'] = 'highertaxon_op';
+$handler->display->display_options['filters']['highertaxon']['expose']['label'] = 'Higher Taxon';
+$handler->display->display_options['filters']['highertaxon']['expose']['use_operator'] = TRUE;
+$handler->display->display_options['filters']['highertaxon']['expose']['operator'] = 'highertaxon_op';
+$handler->display->display_options['filters']['highertaxon']['expose']['identifier'] = 'highertaxon';
+$handler->display->display_options['filters']['highertaxon']['expose']['remember_roles'] = array(
+  2 => '2',
+  1 => 0,
+  3 => 0,
+);
+/* Filter criterion: full_rawdata: stratigraphytext */
+$handler->display->display_options['filters']['stratigraphytext']['id'] = 'stratigraphytext';
+$handler->display->display_options['filters']['stratigraphytext']['table'] = 'full_rawdata';
+$handler->display->display_options['filters']['stratigraphytext']['field'] = 'stratigraphytext';
+$handler->display->display_options['filters']['stratigraphytext']['operator'] = 'contains';
+$handler->display->display_options['filters']['stratigraphytext']['group'] = 1;
+$handler->display->display_options['filters']['stratigraphytext']['exposed'] = TRUE;
+$handler->display->display_options['filters']['stratigraphytext']['expose']['operator_id'] = 'stratigraphytext_op';
+$handler->display->display_options['filters']['stratigraphytext']['expose']['label'] = 'Stratigraphy';
+$handler->display->display_options['filters']['stratigraphytext']['expose']['use_operator'] = TRUE;
+$handler->display->display_options['filters']['stratigraphytext']['expose']['operator'] = 'stratigraphytext_op';
+$handler->display->display_options['filters']['stratigraphytext']['expose']['identifier'] = 'stratigraphytext';
+$handler->display->display_options['filters']['stratigraphytext']['expose']['remember_roles'] = array(
+  2 => '2',
+  1 => 0,
+  3 => 0,
+);
+/* Filter criterion: full_rawdata: locality */
+$handler->display->display_options['filters']['locality']['id'] = 'locality';
+$handler->display->display_options['filters']['locality']['table'] = 'full_rawdata';
+$handler->display->display_options['filters']['locality']['field'] = 'locality';
+$handler->display->display_options['filters']['locality']['operator'] = 'contains';
+$handler->display->display_options['filters']['locality']['group'] = 1;
+$handler->display->display_options['filters']['locality']['exposed'] = TRUE;
+$handler->display->display_options['filters']['locality']['expose']['operator_id'] = 'locality_op';
+$handler->display->display_options['filters']['locality']['expose']['label'] = 'locality';
+$handler->display->display_options['filters']['locality']['expose']['use_operator'] = TRUE;
+$handler->display->display_options['filters']['locality']['expose']['operator'] = 'locality_op';
+$handler->display->display_options['filters']['locality']['expose']['identifier'] = 'locality';
+$handler->display->display_options['filters']['locality']['expose']['remember_roles'] = array(
+  2 => '2',
+  1 => 0,
+  3 => 0,
+);
+/* Filter criterion: full_rawdata: searchInstitution */
+$handler->display->display_options['filters']['searchInstitution']['id'] = 'searchInstitution';
+$handler->display->display_options['filters']['searchInstitution']['table'] = 'full_rawdata';
+$handler->display->display_options['filters']['searchInstitution']['field'] = 'searchInstitution';
+$handler->display->display_options['filters']['searchInstitution']['operator'] = 'contains';
+$handler->display->display_options['filters']['searchInstitution']['group'] = 1;
+$handler->display->display_options['filters']['searchInstitution']['exposed'] = TRUE;
+$handler->display->display_options['filters']['searchInstitution']['expose']['operator_id'] = 'searchInstitution_op';
+$handler->display->display_options['filters']['searchInstitution']['expose']['label'] = 'Institution';
+$handler->display->display_options['filters']['searchInstitution']['expose']['use_operator'] = TRUE;
+$handler->display->display_options['filters']['searchInstitution']['expose']['operator'] = 'searchInstitution_op';
+$handler->display->display_options['filters']['searchInstitution']['expose']['identifier'] = 'searchInstitution';
+$handler->display->display_options['filters']['searchInstitution']['expose']['remember_roles'] = array(
+  2 => '2',
+  1 => 0,
+  3 => 0,
+);
+/* Filter criterion: full_rawdata: unitid */
+$handler->display->display_options['filters']['unitid']['id'] = 'unitid';
+$handler->display->display_options['filters']['unitid']['table'] = 'full_rawdata';
+$handler->display->display_options['filters']['unitid']['field'] = 'unitid';
+$handler->display->display_options['filters']['unitid']['operator'] = 'contains';
+$handler->display->display_options['filters']['unitid']['group'] = 1;
+$handler->display->display_options['filters']['unitid']['exposed'] = TRUE;
+$handler->display->display_options['filters']['unitid']['expose']['operator_id'] = 'unitid_op';
+$handler->display->display_options['filters']['unitid']['expose']['label'] = 'Object ID';
+$handler->display->display_options['filters']['unitid']['expose']['use_operator'] = TRUE;
+$handler->display->display_options['filters']['unitid']['expose']['operator'] = 'unitid_op';
+$handler->display->display_options['filters']['unitid']['expose']['identifier'] = 'unitid';
+$handler->display->display_options['filters']['unitid']['expose']['remember_roles'] = array(
+  2 => '2',
+  1 => 0,
+  3 => 0,
+);
+/* Filter criterion: full_rawdata: mineral */
+$handler->display->display_options['filters']['mineral']['id'] = 'mineral';
+$handler->display->display_options['filters']['mineral']['table'] = 'full_rawdata';
+$handler->display->display_options['filters']['mineral']['field'] = 'mineral';
+$handler->display->display_options['filters']['mineral']['group'] = 1;
+$handler->display->display_options['filters']['mineral']['exposed'] = TRUE;
+$handler->display->display_options['filters']['mineral']['expose']['operator_id'] = 'mineral_op';
+$handler->display->display_options['filters']['mineral']['expose']['label'] = 'mineral';
+$handler->display->display_options['filters']['mineral']['expose']['use_operator'] = TRUE;
+$handler->display->display_options['filters']['mineral']['expose']['operator'] = 'mineral_op';
+$handler->display->display_options['filters']['mineral']['expose']['identifier'] = 'mineral';
+$handler->display->display_options['filters']['mineral']['expose']['remember_roles'] = array(
+  2 => '2',
+  1 => 0,
+  3 => 0,
+);
+$handler->display->display_options['filters']['mineral']['is_grouped'] = TRUE;
+$handler->display->display_options['filters']['mineral']['group_info']['label'] = 'Object';
+$handler->display->display_options['filters']['mineral']['group_info']['identifier'] = 'mineral';
+$handler->display->display_options['filters']['mineral']['group_info']['group_items'] = array(
+  1 => array(
+    'title' => 'Minerals only',
+    'operator' => '=',
+    'value' => array(
+      'value' => '1',
+      'min' => '',
+      'max' => '',
+    ),
+  ),
+  2 => array(
+    'title' => 'Fossils only',
+    'operator' => '!=',
+    'value' => array(
+      'value' => '1',
+      'min' => '',
+      'max' => '',
+    ),
+  ),
+);
+/* Filter criterion: full_rawdata: url */
+$handler->display->display_options['filters']['url']['id'] = 'url';
+$handler->display->display_options['filters']['url']['table'] = 'full_rawdata';
+$handler->display->display_options['filters']['url']['field'] = 'url';
+$handler->display->display_options['filters']['url']['group'] = 1;
+$handler->display->display_options['filters']['url']['exposed'] = TRUE;
+$handler->display->display_options['filters']['url']['expose']['operator_id'] = 'url_op';
+$handler->display->display_options['filters']['url']['expose']['label'] = 'url';
+$handler->display->display_options['filters']['url']['expose']['operator'] = 'url_op';
+$handler->display->display_options['filters']['url']['expose']['identifier'] = 'url';
+$handler->display->display_options['filters']['url']['is_grouped'] = TRUE;
+$handler->display->display_options['filters']['url']['group_info']['label'] = 'Multimedia';
+$handler->display->display_options['filters']['url']['group_info']['identifier'] = 'url';
+$handler->display->display_options['filters']['url']['group_info']['group_items'] = array(
+  1 => array(
+    'title' => 'yes',
+    'operator' => 'starts',
+    'value' => 'http://',
+  ),
+  2 => array(
+    'title' => 'no',
+    'operator' => 'not_starts',
+    'value' => 'http://',
+  ),
+);
+$handler->display->display_options['tooltips'] = array(
+  'gatheringdate' => array(
+    'label_tooltip' => array(),
+    'label2_tooltip' => array(),
+  ),
+  'counter' => array(
+    'label_tooltip' => array(
+      'ajax_mode' => '1',
+    ),
+  ),
+);
+
+/* Display: Page */
+$handler = $view->new_display('page', 'Page', 'page');
+$handler->display->display_options['exposed_block'] = TRUE;
+$handler->display->display_options['path'] = 'bhit';
+
+/* Display: Block */
+$handler = $view->new_display('block', 'Block', 'block_1');
+$handler->display->display_options['block_description'] = 'BHIT';

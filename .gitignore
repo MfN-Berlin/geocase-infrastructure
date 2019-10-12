@@ -1,0 +1,6 @@
+geocase_data/*
+bhit_data/*
+bhit/application.properties
+bhit/schemaOnly.sql
+geocase_portal_sites/*
+install.cfg

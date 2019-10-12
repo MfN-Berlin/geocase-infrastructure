@@ -1,0 +1,30 @@
+# this sets the maximum number of indexing threads
+# the recommended value is between 1 - 20, any higher than 20 just causes too much traffic on the database
+maxNumIndexingThreads=2
+
+#Quality options
+#qualityOnOff: ON or OFF ;)
+qualityOnOff=OFF
+coordinatesWebservice=http://bhit:8080/CoordinatesWS
+#the coordinates webservice can be downloaded from http://ww2.biocase.org/svn/binhum/trunk/BinHum/Webservice/CoordinatesWS/
+gisgraphyServer=http://130.133.70.60:8081/geoloc/
+
+#will not reharvest existing files if false; will harvest it again if true. Should be put to true in production mode
+production=true
+
+temporaryFolder= /tmp/
+
+# interval in milliseconds that sets how often the application looks for eligible jobs and fires them
+# the recommended value is 60000, any smaller consumes too many resources constantly pooling for new jobs
+jobFiringIntervalMs=5000
+
+dataSource.driverClassName=com.mysql.jdbc.Driver
+
+dataSource.username=geocase_user
+dataSource.password=yourDatabasePassword
+
+dataSource.servername=geocase_database
+baseUrl=http://bhit.example.org:8080/
+harvest.directory= /var/bhit/data
+dataSource.name=bhit_index
+dataSource.url=jdbc:mysql://geocase_database:3306/bhit_index?autoReconnect=true&useUnicode=true&characterEncoding=UTF8&characterSetResults=UTF8&MVCC=true
