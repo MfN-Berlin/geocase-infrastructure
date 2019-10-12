@@ -10,7 +10,14 @@ It consists of Docker containers of the following software components
 In order to roll out the components please copy or rename the file `install.cfg.example` to `install.cfg` and edit configuration in the file.
 The deployment is designed for Linux OS  (tested with Ubuntu 16.04 and 18.04)
 
-* after cloning this Git repository make `install.sh` executable by
+* after cloning this Git repository make _install.sh_ executable by
  `chmod +x install.sh`
 * then start the installation with
  `./install.sh`
+
+# Requirements
+* Linux OS
+* Docker (https://www.docker.com/)
+* internet connection during installation procedure
+* knowledge in the usage of Drupal 7 and BHIT
+* knowledge about the idea of Biodiversity Standards and decentral data provision
