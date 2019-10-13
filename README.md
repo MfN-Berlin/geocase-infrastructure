@@ -14,17 +14,18 @@ It consists of Docker containers of the following software components
 * knowledge about the idea of Biodiversity Standards and decentral data provision
 
 # Installation
-In order to roll out the components please copy or rename the file `install.cfg.example` to `install.cfg` and edit the configuration in the file.
+In order to roll out the components please follow the steps below.
 The deployment is designed for Linux OS  (tested with Ubuntu 16.04 and 18.04)
 
-* after cloning this Git repository make _install.sh_ executable by
- `chmod +x install.sh`
-* then start the installation with
- `./install.sh`
+* clone this Git repository
+* copy or rename the file `install.cfg.example` to `install.cfg` and edit the configuration in the file
+* copy or rename the file `bhit/application.properties.example` to `bhit/applications.properties` and configure the BHIT as described here https://wiki.bgbm.org/bhit/index.php/Installation#Edit_the_application.properties_file
+* make _install.sh_ executable with the command  `chmod +x install.sh`
+* then start the installation with the command `./install.sh`
 * follow the instructions of the installation script
 * after a successfull installation the BHIT and a Drupal website should be available
   e.g. BHIT at http://localhost:8080/bhit/  and the Drupal website (GeoCASe Portal) at http://localhost/  (depending on your configuration)
-* in order to connect BHIT and the Drupal website, you need to manually import the file `geocase_portal/geocase_bhit.views.export` in the Drupal Views module (e.g. http://localhost/admin/structure/views/import)
+* in order to finalize the connection between BHIT and the Drupal website, you need to manually import the file `geocase_portal/geocase_bhit.views.export` in the Drupal Views module (e.g. http://localhost/admin/structure/views/import)
 * this creates a Block (http://localhost/admin/structure/block) called _BHIT_ that must be activated by assigning a region in the template in order to display the block.
 
 # Usage
