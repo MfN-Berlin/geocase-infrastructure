@@ -29,8 +29,8 @@ The deployment is designed for Linux OS  (tested with Ubuntu 16.04 and 18.04)
 * this creates a Block (http://localhost/admin/structure/block) called _BHIT_ that must be activated by assigning a region in the template in order to display the block.
 
 # Usage
-In order to access data in the portal you need to register and harvest data sources in BHIT in order to aggregate the decentral data. Only after harvesting the created VIEW and Block in Drupal will display data in the portal.
-Please visit https://wiki.bgbm.org/bhit/ in order to learn how to use BHIT.
+In order to access data in the portal you need to register and harvest data sources in BHIT for aggregating the decentral data. Only after harvesting the created View and Block in Drupal will display data in the portal.
+Please visit https://wiki.bgbm.org/bhit/ to learn how to use BHIT.
 
 # Disclaimer
 The code deploys the underlying GeoCASe infrastructure components and not a copy of http://geocase.eu! Thus, no content and/or design is shipped with this code.
