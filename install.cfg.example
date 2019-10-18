@@ -1,5 +1,6 @@
 
-MYSQL_DATABASE=bhit_index
+MYSQL_BHIT_DATABASE=bhit_index
+MYSQL_GEOCASE_DATABASE=geocase_portal
 MYSQL_USER=geocase_user
 MYSQL_PASSWORD=yourDatabasePassword
 MYSQL_ROOT_PASSWORD=yourRootDatabasePassword
