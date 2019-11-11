@@ -20,6 +20,7 @@ The deployment is designed for Linux OS  (tested with Ubuntu 16.04 and 18.04)
 * clone this Git repository
 * copy or rename the file `install.cfg.example` to `install.cfg` and edit the configuration in the file
 * copy or rename the file `bhit/application.properties.example` to `bhit/applications.properties` and configure the BHIT as described here https://wiki.bgbm.org/bhit/index.php/Installation#Edit_the_application.properties_file
+* edit the database password for the portal's database user in `geocase_portal/geocasePortal.sql`
 * make _install.sh_ executable with the command  `chmod +x install.sh`
 * then start the installation with the command `./install.sh`
 * follow the instructions of the installation script
